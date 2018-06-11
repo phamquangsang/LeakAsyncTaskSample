@@ -62,7 +62,7 @@ public class FeedsFragment extends Fragment {
 
         @Override
         protected void onPostExecute(List<Feed> feeds) {
-            if(ref.get() != null ){
+            if(ref.get() != null && ref.get().getContext() != null){
                 Toast.makeText(ref.get().getContext(), "Done", Toast.LENGTH_SHORT).show();
                 ref.get().bindView(feeds);
             }
